@@ -1,0 +1,54 @@
+#include <stdio.h>
+
+
+int saler(int),ven(int);
+
+
+int main()
+{
+int inv=1000,c;
+
+saler(inv);
+  int saler(inv){
+      int sold;
+
+    if(inv==1000){
+        printf("inventory is full now %d\n", inv);
+    }
+
+        printf("how many item you want to buy\n");
+         scanf("%d",&sold);
+         inv=inv-sold;
+        printf("%d item are left\n",inv);
+
+
+        if(inv<=250){
+        ven(inv);
+
+    }
+
+    if(500>=inv&&inv>250){
+        printf("Over 50 percent of the products have been sold\n");
+    }
+
+
+    return inv;
+    saler();
+
+  }
+
+
+
+    int ven(inv){
+
+    int m=1000-inv;
+    inv=inv+m;
+    printf("inventory is below them 75 percent Wait a minute for it to fill up\n");
+    printf("%d item add to inventory\n",m);
+
+    return inv;
+
+
+    }
+main();
+}
